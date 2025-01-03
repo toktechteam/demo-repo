@@ -1,0 +1,39 @@
+graph TD
+    subgraph SDLC Lifecycle
+        P[Plan]
+        D[Develop]
+        BT[Build & Test]
+        DP[Deploy]
+        OM[Operate & Monitor]
+    end
+
+    %% Roles and mapping
+    Developers --> D
+    DevOps --> BT
+    DevOps --> DP
+    DevSecOps --> BT
+    DevSecOps --> DP
+    AIOps --> OM
+    PlatformEngineers --> D
+    PlatformEngineers --> BT
+    CloudAdmin --> DP
+    CloudAdmin --> OM
+    MLOps --> D
+    MLOps --> BT
+    MLOps --> DP
+    FinOps --> DP
+    FinOps --> OM
+    SRE --> OM
+    SRE --> D
+
+    %% Role Descriptions
+    subgraph Roles
+        DevOpsRole[DevOps: Automates CI/CD pipelines and manages releases]
+        DevSecOpsRole[DevSecOps: Embeds security in pipelines and deployments]
+        AIOpsRole[AIOps: Uses AI for automated incident management]
+        PlatformRole[Platform Engineers: Build internal developer platforms for CI/CD]
+        CloudAdminRole[Cloud Admin: Manages cloud infrastructure setup and governance]
+        MLOpsRole[MLOps: Operationalizes ML models and pipelines]
+        FinOpsRole[FinOps: Optimizes cloud costs and usage]
+        SRERole[SRE: Ensures system reliability and manages incidents]
+    end
